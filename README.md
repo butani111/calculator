@@ -1,9 +1,11 @@
 # calculator
-This calculator has two modes (normal and scientific).
+This calculator has two modes (normal and scientific):
 
-![Screenshot (24)](https://user-images.githubusercontent.com/79257444/117926607-a5f6cf00-b316-11eb-915a-9f8048e33a09.png)
-![Screenshot (25)](https://user-images.githubusercontent.com/79257444/117926622-ac854680-b316-11eb-85e7-694905c3fadc.png)
+<p>1. Normal<p>
+<img src="https://user-images.githubusercontent.com/79257444/117926607-a5f6cf00-b316-11eb-915a-9f8048e33a09.png" width = 200>
 
+<p>2. Scientific<p>
+<img src="https://user-images.githubusercontent.com/79257444/117926622-ac854680-b316-11eb-85e7-694905c3fadc.png" width = 200>
 
 Link : https://shyam-calculator.netlify.app/
 
