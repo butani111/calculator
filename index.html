@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Calculator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="main" id="main">
-    <h1>Calculator</h1>
-    <div id="top">
-      <div class="display">0</div>
-      <span id="back-space">&#8592</span>
-    </div>
+  <main>
+    <h1 class="title"><u>Calculator</u></h1>
 
-    <div id="page1">
-      <div class="scintific">
-        <div class="row">
-          <span class="keys-sci">log</span>
-          <span class="keys-sci">ln</span>
-          <span class="keys-sci">sin</span>
-          <span class="keys-sci">cos</span>
-          <span class="keys-sci">tan</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="scintific">
-          <span class="keys-sci">x^y</span>
-        </div>
-        <span class="keys-to-change">7</span>
-        <span class="keys-to-change">8</span>
-        <span class="keys-to-change">9</span>
-        <span class="keys-to-change">/</span>
-      </div>
-      <div class="row">
-        <div class="scintific">
-          <span class="keys-sci">1/x</span>
-        </div>
-        <span class="keys-to-change">4</span>
-        <span class="keys-to-change">5</span>
-        <span class="keys-to-change">6</span>
-        <span class="keys-to-change">*</span>
-      </div>
-      <div class="row">
-        <div class="scintific">
-          <span class="keys-sci">e</span>
-        </div>
-        <span class="keys-to-change">1</span>
-        <span class="keys-to-change">2</span>
-        <span class="keys-to-change">3</span>
-        <span class="keys-to-change">-</span>
-      </div>
-      <div class="row">
-        <div class="scintific">
-          <span class="keys-sci">&#960</span>          
-        </div>
-        <span class="keys-to-change">0</span>
-        <span class="keys-to-change">.</span>
-        <span class="keys-to-change" id="answerKey">=</span>
-        <span class="keys-to-change">+</span>
-      </div>
-    </div>
+    <section class="display-section">
+      <p id="display">0</p>
+      <span id="back-space" onClick="romove_last()" onmousedown="return false" onselectstart="return false">
+        &#8592
+      </span>
+    </section>
 
-    <div class="row">
-      <span id="clear">C</span>
-      <span id="change-mode">sci</span>
-    </div>
-  </div>
+    <section class="btn-section" id="btn-section" onmousedown="return false" onselectstart="return false">
+      <!-- copy/cut text not allowed in buttons -->
+      <table>
+        <tr>
+          <td onClick="perform('ln')" class="sci-btn">ln</td>
+          <td onClick="perform('log')" class="sci-btn">log</td>
+          <td onClick="perform('sin')" class="sci-btn">sin</td>
+          <td onClick="perform('cos')" class="sci-btn">cos</td>
+          <td onClick="perform('tan')" class="sci-btn">tan</td>
+        </tr>
+        <tr>
+          <td onClick="addKey('**')" class="sci-btn"> x<sup>y</sup> </td>
+          <td onClick="addKey('7')" class="keyboard-input">7</td>
+          <td onClick="addKey('8')">8</td>
+          <td onClick="addKey('9')">9</td>
+          <td onClick="addKey('/')">/</td>
+        </tr>
+        <tr>
+          <td onClick="perform('1/x')" class="sci-btn">1/x</td>
+          <td onClick="addKey('4')">4</td>
+          <td onClick="addKey('5')">5</td>
+          <td onClick="addKey('6')">6</td>
+          <td onClick="addKey('*')">*</td>
+        </tr>
+        <tr>
+          <td onClick="addKey('e')" class="sci-btn">e</td>
+          <td onClick="addKey('1')">1</td>
+          <td onClick="addKey('2')">2</td>
+          <td onClick="addKey('3')">3</td>
+          <td onClick="addKey('-')">-</td>
+        </tr>
+        <tr>
+          <td onClick="addKey('π')" class="sci-btn">&#960</td>
+          <td onClick="addKey('0')">0</td>
+          <td onClick="addKey('.')">.</td>
+          <td onClick="get_answer()" id="answer-btn">=</td>
+          <td onClick="addKey('+')">+</td>
+        </tr>
+      </table>
+    </section>
 
-  
+    <section class="bottom-section" onmousedown="return false" onselectstart="return false">
+      <!-- copy/cut text not allowed -->
+      <span onClick="clear_all()" id="clear">C</span>
+      <span onClick="change_mode()" id="change-mode"> scitific</span>
+    </section>
+  </main>
+
   <script src="script.js"></script>
 </body>
+
 </html>

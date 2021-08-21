@@ -1,27 +1,31 @@
-body{
+body {
   display: flex;
   align-items: center;
   height: auto;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.main{
-  width: 80%;
+.title {
+  font-family: "Caveat", cursive, sans-serif;
+  font-size: 50px;
+  line-height: 20px;
+}
+
+main {
+  width: 98%;
   max-width: 500px;
   height: auto;
-  border: 5px solid grey;
-  border-radius: 15px;
-  background-color: rgb(221, 216, 216);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 20px auto;
-}
-#top{
-  width: 100%;
+  box-shadow: 0px 0px 20px black;
+  background-color: rgb(242, 242, 248);
 }
 
-.display{
+#display {
   display: inline-block;
   width: 80%;
   height: 50px;
@@ -34,97 +38,119 @@ body{
   padding-left: 5px;
   padding-right: 5px;
   overflow: auto;
-  /* background-color: white; */
+  white-space: nowrap;
 }
 
-/* #page1 span, #clear, #top span */ /* .main span */
-.keys-to-change, .keys-sci, #back-space, #clear, #change-mode
-{
+.display-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#back-space {
+  display: flex;
+  width: 50px;
+  font-size: 35px;
+  justify-content: center;
+  line-height: 35px;
+  background-color: grey;
+}
+
+.btn-section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+td,
+#back-space,
+#clear,
+#change-mode {
   display: inline-block;
-  width: 70px;
+  width: 4rem;
   height: 50px;
   border: 2px solid black;
   border-radius: 8px;
   margin: 8px;
+  padding-top: 10px;
   text-align: center;
-  font-size: 35px; 
-  background-color: grey;
+  font-size: 2rem;
   cursor: pointer;
 }
-.keys-to-change {
-  width: 90px;
-}
-.keys-sci{
-  display: none;
-  color: white;
-  /* background-color: black; */
-}
-#answerKey{
+
+td:hover,
+#back-space:hover,
+#change-mode:hover {
+  transform: scale(1.1);
   background-color: yellow;
 }
-#back-space{
-  display: block;
-  width: 50px;
-  margin-top: 25px;
-  float: right;
-  font-size: 35px;
-}
-.scintific{
-  display: inline-block;
+
+td:active,
+#back-space:active,
+#clear:active,
+#change-mode:active {
+  background-color: rgb(0, 255, 179);
 }
 
-#clear{
-  width: 150px;
-  background-color: rgb(238, 142, 190);
-  margin-left: 100px;
+.sci-btn {
+  display: none;
+  color: rgb(2, 82, 2);
 }
 
-#change-mode{
-  width: 80px;
-  font-size: 25px;
-  margin-left: 50px;
-  padding-top: 8px;
-  color: white;;
-  background-color: blue;
-  border-radius: 30px;
+#answer-btn {
+  background-color: rgb(0, 255, 179);
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#clear,
+#change-mode {
+  width: 40%;
+  max-width: 150px;
+  height: auto;
+  padding: 5px 0px;
+}
+
+#clear {
+  background-color: rgb(248, 26, 45);
+}
+
+#clear:hover {
+  transform: scale(1.1);
 }
 
 /* Responsive for small screens */
-@media (max-width: 620px) {
-  .main{
-    width: 90%;
-    max-width: 340px;
+@media (max-width: 500px) {
+  .title {
+    font-size: 40px;
   }
-  .display{
-    width: 75%;
-    height: 40px;
-    font-size: 25px;
+  #display {
+    font-size: 2rem;
+    height: auto;
   }
-  .keys-to-change, .keys-sci, #back-space, #clear, #change-mode{
-    display: inline-block;
-    width: 45px;
-    height: 35px;
-    margin: 4px;
-    font-size: 25px;
+  #back-space {
+    height: 2rem;
+    line-height: 15px;
   }
-  .keys-to-change {
-    width: 60px;
+  td {
+    height: 100%;
+    width: 2.7rem;
+    font-size: 1.5rem;
+    margin: 1px;
+    padding: 0;
   }
-  .keys-sci{
-    display: none;
-  }
-  #back-space{
-    width: 35px;
-    margin-top: 28px;
-    font-size: 25px;
-  }
-  #clear{
-    width: 70px;
-    margin-left: 100px;
-  }
-  #change-mode{
-    width: 80px;
-    font-size: 20px;
-    margin-left: 20px;
+  #clear,
+  #change-mode {
+    font-size: 2rem;
+    padding: 0;
   }
 }
