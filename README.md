@@ -11,5 +11,8 @@ This calculator has two modes (normal and scientific):
 
 Link : https://shyam-calculator.netlify.app/
 
+## Technologies Used
+HTML | CSS | Javascript
+#
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7a3e0c67-ddb6-4c43-94c4-2240aa4f25da/deploy-status)](https://app.netlify.com/sites/shyam-calculator/deploys)
